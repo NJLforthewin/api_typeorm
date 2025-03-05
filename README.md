@@ -1,2 +1,2 @@
-# Javascript Review Project By John Christian S. Sancija
+# John Christian S. Sancija
 
