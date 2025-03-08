@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
+    "@types/hapi__joi": "^17.1.15",
     "@types/node": "^22.13.9",
     "nodemon": "^2.0.4",
     "typescript": "^5.8.2"

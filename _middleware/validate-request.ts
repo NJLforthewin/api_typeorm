@@ -1,0 +1,19 @@
+import { Request, Response, NextFunction } from "express";
+import { Schema } from "joi"; // Ensure you have Joi installed
+
+export function validateRequest(req: Request, res: Response, next: NextFunction, schema: Schema): void {
+    const options = {
+        abortEarly: false, 
+        allowUnknown: true, 
+        stripUnknown: true 
+    };
+
+    const { error, value } = schema.validate(req.body, options);
+
+    if (error) {
+        next(new Error(`Validation error: ${error.details.map(x => x.message).join(", ")}`));
+    } else {
+        req.body = value;
+        next();
+    }
+}
