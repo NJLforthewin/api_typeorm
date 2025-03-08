@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { Schema } from "joi"; // Ensure you have Joi installed
+import { Schema } from "joi"; 
 
 export function validateRequest(req: Request, res: Response, next: NextFunction, schema: Schema): void {
     const options = {
